@@ -1,11 +1,20 @@
 import Head from 'next/head';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import '../styles/main.css';
+import { useEffect } from 'react';
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    // Garante que os estilos sejam aplicados após o carregamento no cliente
+    const theme = document.documentElement.getAttribute('data-theme');
+    if (!theme) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  }, []);
+
   return (
     <>
-      <Head>
+      <Head suppressHydrationWarning>
         <link
           rel="alternate"
           type="application/rss+xml"
