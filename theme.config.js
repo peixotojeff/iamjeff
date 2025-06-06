@@ -4,7 +4,6 @@ export default {
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
       <time>{YEAR}</time> © Jefferson Peixoto.
-      Feito com <span style={{ color: 'red' }}>❤️</span> e muito café.
       <a href="/feed.xml">RSS</a>
       <style jsx>{`
         a {

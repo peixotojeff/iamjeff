@@ -1,3 +1,3 @@
 export default function MeuComponente() {
-  return <div>Olá, sou um componente React!</div>;
+  return <div>Feito com <span style={{ color: 'red' }}>❤️</span> e muito café.</div>;
 }
