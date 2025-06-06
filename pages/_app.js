@@ -1,5 +1,15 @@
 import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <SpeedInsights />
+    </>
+  );
+}
 
 import '../styles/main.css'
 
